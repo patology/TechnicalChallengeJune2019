@@ -1,13 +1,25 @@
 import re
 #module incliuded in the python library for executing searches
 
-all_docs = []
-#an array consisting all the documents to search from
+#intitializing variables
+all_docs = ['.pdf', '.txt', '.ppt']
 
-def documents (): #defining a function called documents to scan through the documents
-if all_docs:
-x1 = re.findall (a"^\w+",all_docs)
-print (x1)
-documents () #end of function documents
+#defining a function called documents to scan through the files using .read 
+def documents_with_a(): 
+  
+ #an array consisting all the documents to search fromif all_docs:
+x1 = []  
+      #checking if files are readable format
+      if f.mode == 'r':
+          
+          #invoking a findall to find a
+          f = re.findall('a', all_docs)
+           x1.append (f)
+      
+    return x1
+  
+#end of function documents
+documents_with_a() 
 
-print (all_docs) #output to print out only documents with letter 'a'
+#output to print out only documents with letter 'a'
+print (documents_with_a()) 
